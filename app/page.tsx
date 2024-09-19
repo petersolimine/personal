@@ -12,10 +12,14 @@ const tabs = [
 ];
 
 const socialLinks = [
-  { id: 'github', icon: Github, href: 'https://github.com' },
-  { id: 'twitter', icon: Twitter, href: 'https://twitter.com' },
-  { id: 'linkedin', icon: Linkedin, href: 'https://linkedin.com' },
-  { id: 'email', icon: Mail, href: 'mailto:your.email@example.com' },
+  { id: 'github', icon: Github, href: 'https://github.com/petersolimine' },
+  { id: 'twitter', icon: Twitter, href: 'https://twitter.com/@peterthedecent' },
+  {
+    id: 'linkedin',
+    icon: Linkedin,
+    href: 'https://linkedin.com/in/petersolimine',
+  },
+  { id: 'email', icon: Mail, href: 'mailto:petersolimine@gmail.com' },
 ];
 
 export default function Home() {
