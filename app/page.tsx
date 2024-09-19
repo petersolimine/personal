@@ -8,7 +8,7 @@ import Link from 'next/link';
 const tabs = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
-  { id: 'resume', label: 'Resume' },
+  { id: 'blog', label: 'Blog' },
 ];
 
 const socialLinks = [
