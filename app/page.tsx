@@ -222,9 +222,8 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
                 <p className="text-lg">
-                  Hello! I'm a passionate developer with a love for creating
-                  beautiful and functional web applications. I specialize in
-                  React, Next.js, and modern web technologies.
+                  Ayy, how we doin? I'm Pete. I like to make stuff. Let's be
+                  friends!
                 </p>
               </div>
             )}
@@ -236,28 +235,40 @@ export default function Home() {
                 <ul className="space-y-4">
                   <li>
                     <h3 className="text-xl font-semibold text-white">
-                      Project 1
+                      Parallel Distribution
                     </h3>
-                    <p>A brief description of your first project.</p>
+                    <p>Bootstrapped SaaS for scaling CPG brands.</p>
                   </li>
                   <li>
                     <h3 className="text-xl font-semibold text-white">
-                      Project 2
+                      Indie Hacking
                     </h3>
-                    <p>A brief description of your second project.</p>
+                    <p>
+                      Chatti, Parrot, Quizwiz, SayBloom, etc... Consumer apps.
+                    </p>
+                  </li>
+                  <li>
+                    <h3 className="text-xl font-semibold text-white">Beulr</h3>
+                    <p>Probably why you're here, RIP.</p>
+                  </li>
+                  <li>
+                    <h3 className="text-xl font-semibold text-white">
+                      Chroma Hacker in Residence
+                    </h3>
+                    <p>Chroma is epic</p>
                   </li>
                 </ul>
               </div>
             )}
             {activeTab === 'resume' && (
               <div>
-                <h2 className="text-3xl font-bold mb-4 text-white">Resume</h2>
+                <h2 className="text-3xl font-bold mb-4 text-white">Blog</h2>
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-semibold text-white">
-                      Work Experience
+                      Coming soon...
                     </h3>
-                    <p>Your work experience details go here.</p>
+                    <p>Question: would you rather read, or watch?</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">
