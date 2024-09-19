@@ -47,7 +47,7 @@ export const metadata = {
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': "Hi I'm Peter Solimine",
+    'apple-mobile-web-app-title': "Hi I'm Peter Solimine 👋",
     'format-detection': 'telephone=no',
     'msapplication-TileColor': '#4285f4',
     'msapplication-config': '/browserconfig.xml',
