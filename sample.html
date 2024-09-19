@@ -1,0 +1,412 @@
+<main class="relative min-h-full flex-1">
+  <!--$--><!--/$-->
+  <div
+    class="bg-background absolute inset-0 flex justify-center overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 flex select-none items-center justify-center overflow-hidden sm:p-4"
+    >
+      <div
+        class="absolute inset-0 left-1/2 z-0 flex size-full max-w-screen-2xl -translate-x-1/2 items-center justify-center"
+      >
+        <svg
+          aria-hidden="true"
+          class="pointer-events-none -translate-y-32 p-2 md:translate-y-0"
+          fill="none"
+          height="610"
+          viewBox="0 0 1283 610"
+          width="1283"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <radialGradient id="pulseGradient">
+              <stop offset="10%" stop-color="#58F0D4"></stop>
+              <stop offset="95%" stop-color="#58F0D400"></stop>
+            </radialGradient>
+            <linearGradient gradientTransform="rotate(90)" id="fadeGradient">
+              <stop offset="0%" stop-color="#888888"></stop>
+              <stop offset="50%" stop-color="white"></stop>
+              <stop offset="100%" stop-color="#888888"></stop>
+            </linearGradient>
+            <mask id="vignette">
+              <rect
+                fill="url('#fadeGradient')"
+                height="610"
+                width="1283"
+                x="0"
+                y="0"
+              ></rect>
+            </mask>
+            <mask id="v-clip">
+              <path
+                class="pulse-fade"
+                d="M184.5 114.5H2C154.667 262.5 458 556.385 494 591C530 625.615 612.5 613 612.5 541.5V114.5H485.5V406L184.5 114.5Z"
+                stroke="white"
+                vector-effect="non-scaling-stroke"
+              ></path>
+            </mask>
+            <mask id="o-clip">
+              <path
+                class="pulse-fade"
+                d="M653.5 114.5H1075L774 410V1C774 1 954.5 1 1075 1C1195.5 1 1282 114.5 1282 207C1282 299.5 1282 495.5 1282 495.5H868.5L1162 207V609.5C1162 609.5 998 609.5 868.5 609.5C739 609.5 653.5 487 653.5 410C653.5 333 653.5 114.5 653.5 114.5Z"
+                stroke="white"
+                vector-effect="non-scaling-stroke"
+              ></path>
+            </mask>
+          </defs>
+          <style>
+            .vPath {
+              offset-path: path(
+                'M184.5 114.5H2C154.667 262.5 458 556.385 494 591C530 625.615 612.5 613 612.5 541.5V114.5H485.5V406L184.5 114.5Z'
+              );
+              animation: followpath 11s linear infinite,
+                pulse-fade 7s linear infinite;
+              opacity: 0;
+            }
+
+            .oPath {
+              offset-path: path(
+                'M653.5 114.5H1075L774 410V1C774 1 954.5 1 1075 1C1195.5 1 1282 114.5 1282 207C1282 299.5 1282 495.5 1282 495.5H868.5L1162 207V609.5C1162 609.5 998 609.5 868.5 609.5C739 609.5 653.5 487 653.5 410C653.5 333 653.5 114.5 653.5 114.5Z'
+              );
+              animation: followpath 22s linear infinite,
+                pulse-fade 7s linear infinite;
+              animation-delay: 3.5s;
+              opacity: 0;
+            }
+
+            .dashed {
+              stroke-dasharray: 3;
+              stroke-width: 1;
+            }
+            .pulse-fade {
+              stroke-width: 3;
+            }
+
+            @-moz-document url-prefix() {
+              .dashed {
+                stroke-dasharray: 6;
+                stroke-width: 2;
+              }
+              .pulse-fade {
+                stroke-width: 6;
+              }
+            }
+
+            @media (prefers-reduced-motion) {
+              .vPath {
+                opacity: 0;
+              }
+              .oPath {
+                opacity: 0;
+              }
+            }
+
+            @keyframes followpath {
+              to {
+                offset-distance: 100%;
+              }
+            }
+
+            @keyframes pulse-fade {
+              0% {
+                opacity: 0;
+              }
+              40% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              60% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+          </style>
+          <g mask="url(#vignette)">
+            <g mask="url(#v-clip)">
+              <circle
+                class="vPath"
+                fill="url('#pulseGradient')"
+                r="100"
+              ></circle>
+            </g>
+            <g mask="url(#o-clip)">
+              <circle
+                class="oPath"
+                fill="url('#pulseGradient')"
+                r="100"
+              ></circle>
+            </g>
+            <path
+              class="dashed"
+              d="M184.5 114.5H2C154.667 262.5 458 556.385 494 591C530 625.615 612.5 613 612.5 541.5V114.5H485.5V406L184.5 114.5Z"
+              stroke="rgb(var(--gray-300))"
+              vector-effect="non-scaling-stroke"
+            ></path>
+            <path
+              class="dashed"
+              d="M653.5 114.5H1075L774 410V1C774 1 954.5 1 1075 1C1195.5 1 1282 114.5 1282 207C1282 299.5 1282 495.5 1282 495.5H868.5L1162 207V609.5C1162 609.5 998 609.5 868.5 609.5C739 609.5 653.5 487 653.5 410C653.5 333 653.5 114.5 653.5 114.5Z"
+              stroke="rgb(var(--gray-300))"
+              vector-effect="non-scaling-stroke"
+            ></path>
+          </g>
+        </svg>
+      </div>
+      <div
+        class="disabled:border-alpha-300 focus-visible:ring-offset-background pointer-events-none inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-full border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none border-gray-200 bg-gray-200 text-gray-900 hover:border-gray-100 hover:bg-gray-100 focus:border-gray-100 focus:bg-gray-100 focus-visible:border-gray-100 focus-visible:bg-gray-100 h-5 gap-1 text-[0.69rem] has-[>svg]:pl-1 [&amp;>svg]:size-3 absolute right-5 top-5 cursor-default px-2 py-1"
+      >
+        Public Beta
+      </div>
+      <div
+        class="absolute top-1/2 z-10 flex min-h-[285px] w-full max-w-[49rem] -translate-y-1/2 flex-col items-stretch justify-start px-6 sm:min-h-[270px]"
+      >
+        <div class="mb-6 flex flex-col items-center gap-2">
+          <h1
+            class="font-heading text-pretty text-center text-[22px] font-semibold tracking-tighter text-gray-900 sm:text-[30px] md:text-[36px]"
+          >
+            What can I help you ship?
+          </h1>
+          <h2 class="text-balance text-center text-sm text-gray-700">
+            Generate UI, ask questions, debug, execute code, and much more.
+          </h2>
+        </div>
+        <div class="inset-x-0 bottom-0 flex items-center relative">
+          <div class="relative z-10 flex w-full flex-col">
+            <div
+              class="relative rounded-t-xl bg-gray-100 text-gray-600"
+              style="opacity: 1; height: auto; will-change: auto"
+            >
+              <div
+                class="flex items-center justify-between gap-2 py-1.5 pl-3 pr-2 text-xs text-gray-900 md:text-sm"
+              >
+                <span class="block sm:hidden"
+                  >Get more messages with Premium.</span
+                ><span class="hidden sm:block"
+                  >Need more messages? Get higher limits with Premium.</span
+                >
+                <div class="flex items-center gap-1">
+                  <button
+                    class="disabled:border-alpha-300 border-alpha-400 hover:border-alpha-400 focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 !h-auto border-none bg-transparent !p-0 text-teal-700 hover:border-none hover:bg-transparent hover:underline hover:underline-offset-2 focus:border-gray-100 focus:bg-transparent focus-visible:border-gray-100 focus-visible:bg-transparent px-3 has-[>kbd]:gap-2 has-[>svg]:px-2 has-[>kbd]:pr-[6px] rounded-lg h-5 text-xs md:text-sm"
+                  >
+                    Upgrade Plan</button
+                  ><button
+                    class="focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-alpha-200 focus:bg-alpha-200 focus-visible:bg-alpha-200 border-transparent bg-transparent hover:border-transparent focus:border-transparent focus-visible:border-transparent disabled:border-transparent disabled:bg-transparent disabled:text-gray-400 text-sm has-[>kbd]:gap-3 has-[>kbd]:pr-[6px] rounded-lg aspect-square h-5 px-0 text-gray-500 has-[>svg]:px-0"
+                    aria-label="Close"
+                  >
+                    <svg
+                      data-testid="geist-icon"
+                      height="16"
+                      stroke-linejoin="round"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      style="color: currentcolor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.96966 11.0303L10.5 11.5607L11.5607 10.5L11.0303 9.96966L9.06065 7.99999L11.0303 6.03032L11.5607 5.49999L10.5 4.43933L9.96966 4.96966L7.99999 6.93933L6.03032 4.96966L5.49999 4.43933L4.43933 5.49999L4.96966 6.03032L6.93933 7.99999L4.96966 9.96966L4.43933 10.5L5.49999 11.5607L6.03032 11.0303L7.99999 9.06065L9.96966 11.0303Z"
+                        fill="currentColor"
+                      ></path></svg
+                    ><span class="sr-only">Close</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-100 rounded-b-xl">
+              <form
+                class="focus-within:border-alpha-600 border-alpha-400 bg-background relative rounded-xl border transition-colors"
+              >
+                <div
+                  class="@container/textarea bg-background relative z-10 grid rounded-xl"
+                >
+                  <label class="sr-only" for="chat-main-textarea"
+                    >Chat input</label
+                  ><textarea
+                    autofocus=""
+                    id="chat-main-textarea"
+                    name="content"
+                    placeholder="Ask v0 a question…"
+                    style="height: 78px; min-height: 42px; max-height: 384px"
+                    class="resize-none overflow-auto w-full flex-1 bg-transparent p-3 pb-1.5 text-sm outline-none ring-0"
+                    data-1p-ignore="true"
+                    data-dashlane-disabled-on-field="true"
+                  ></textarea>
+                  <div class="flex items-center gap-2 p-3">
+                    <label
+                      data-id="prompt-form-image-upload"
+                      for="fileUpload"
+                      class="focus:border-alpha-400 focus-visible:border-alpha-400 disabled:border-alpha-300 border-alpha-400 hover:border-alpha-400 focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 bg-background text-gray-900 px-3 text-sm has-[>kbd]:gap-2 has-[>svg]:px-2 has-[>kbd]:pr-[6px] rounded-lg focus:bg-muted size-8 hover:bg-gray-100 focus-visible:bg-gray-100"
+                      data-state="closed"
+                      ><input
+                        accept="image/*, .png, .jpg, .jpeg, .webp, .gif, .txt, .json, .csv, .py, .log, .ts, .tsx, .js, .jsx, .md, .html, .css, .yml, .yaml, .mermaid, .mjs, .mts, .sql, .map, .svg, .xml, .glb, .gltf, .mp3, .wav"
+                        class="sr-only"
+                        data-enable-grammarly="false"
+                        data-gramm="false"
+                        data-gramm_editor="false"
+                        id="fileUpload"
+                        multiple=""
+                        tabindex="0"
+                        type="file"
+                      /><svg
+                        data-testid="geist-icon"
+                        height="16"
+                        stroke-linejoin="round"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        style="color: currentcolor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.8591 1.70735C10.3257 1.70735 9.81417 1.91925 9.437 2.29643L3.19455 8.53886C2.56246 9.17095 2.20735 10.0282 2.20735 10.9222C2.20735 11.8161 2.56246 12.6734 3.19455 13.3055C3.82665 13.9376 4.68395 14.2927 5.57786 14.2927C6.47178 14.2927 7.32908 13.9376 7.96117 13.3055L14.2036 7.06304L14.7038 6.56287L15.7041 7.56321L15.204 8.06337L8.96151 14.3058C8.06411 15.2032 6.84698 15.7074 5.57786 15.7074C4.30875 15.7074 3.09162 15.2032 2.19422 14.3058C1.29682 13.4084 0.792664 12.1913 0.792664 10.9222C0.792664 9.65305 1.29682 8.43592 2.19422 7.53852L8.43666 1.29609C9.07914 0.653606 9.95054 0.292664 10.8591 0.292664C11.7678 0.292664 12.6392 0.653606 13.2816 1.29609C13.9241 1.93857 14.2851 2.80997 14.2851 3.71857C14.2851 4.62718 13.9241 5.49858 13.2816 6.14106L13.2814 6.14133L7.0324 12.3835C7.03231 12.3836 7.03222 12.3837 7.03213 12.3838C6.64459 12.7712 6.11905 12.9888 5.57107 12.9888C5.02297 12.9888 4.49731 12.7711 4.10974 12.3835C3.72217 11.9959 3.50444 11.4703 3.50444 10.9222C3.50444 10.3741 3.72217 9.8484 4.10974 9.46084L4.11004 9.46054L9.877 3.70039L10.3775 3.20051L11.3772 4.20144L10.8767 4.70131L5.11008 10.4612C5.11005 10.4612 5.11003 10.4612 5.11 10.4613C4.98779 10.5835 4.91913 10.7493 4.91913 10.9222C4.91913 11.0951 4.98782 11.2609 5.11008 11.3832C5.23234 11.5054 5.39817 11.5741 5.57107 11.5741C5.74398 11.5741 5.9098 11.5054 6.03206 11.3832L6.03233 11.3829L12.2813 5.14072C12.2814 5.14063 12.2815 5.14054 12.2816 5.14045C12.6586 4.7633 12.8704 4.25185 12.8704 3.71857C12.8704 3.18516 12.6585 2.6736 12.2813 2.29643C11.9041 1.91925 11.3926 1.70735 10.8591 1.70735Z"
+                          fill="currentColor"
+                        ></path></svg
+                      ><span class="sr-only">Attach Files</span></label
+                    >
+                    <div class="ml-auto flex items-center gap-2">
+                      <button
+                        class="focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center gap-1.5 whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 disabled:border-alpha-400 text-background border-gray-900 bg-gray-900 hover:border-gray-700 hover:bg-gray-700 focus:border-gray-700 focus:bg-gray-700 focus-visible:border-gray-700 focus-visible:bg-gray-700 h-8 px-3 text-sm has-[>kbd]:gap-2 has-[>svg]:px-2 has-[>kbd]:pr-[6px] rounded-lg"
+                        data-testid="prompt-form-send-button"
+                        type="submit"
+                      >
+                        <svg
+                          data-testid="geist-icon"
+                          height="16"
+                          stroke-linejoin="round"
+                          viewBox="0 0 16 16"
+                          width="16"
+                          style="color: currentcolor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z"
+                            fill="currentColor"
+                          ></path></svg
+                        ><span class="sr-only">Send Message</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-20 min-h-0 shrink-0 items-center justify-center sm:h-16"
+        >
+          <div class="flex flex-wrap justify-center gap-3" style="opacity: 1">
+            <h2 class="sr-only">Suggested Chat Messages</h2>
+            <button
+              class="focus:border-alpha-400 focus-visible:border-alpha-400 disabled:border-alpha-300 border-alpha-400 hover:border-alpha-400 focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus-visible:bg-gray-100 h-6 px-2 text-xs has-[>kbd]:gap-2 has-[>svg]:px-1 has-[>kbd]:pr-1 rounded-full bg-muted gap-0.5 has-[>svg]:pl-1.5"
+            >
+              <span class="block md:hidden">Make an onboarding flow</span
+              ><span class="hidden md:block"
+                >Generate a multi-step onboarding flow</span
+              ><svg
+                data-testid="geist-icon"
+                height="16"
+                stroke-linejoin="round"
+                viewBox="0 0 16 16"
+                width="16"
+                style="color: currentcolor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.75011 4H6.00011V5.5H6.75011H9.43945L5.46978 9.46967L4.93945 10L6.00011 11.0607L6.53044 10.5303L10.499 6.56182V9.25V10H11.999V9.25V5C11.999 4.44772 11.5512 4 10.999 4H6.75011Z"
+                  fill="currentColor"
+                ></path>
+              </svg></button
+            ><button
+              class="focus:border-alpha-400 focus-visible:border-alpha-400 disabled:border-alpha-300 border-alpha-400 hover:border-alpha-400 focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus-visible:bg-gray-100 h-6 px-2 text-xs has-[>kbd]:gap-2 has-[>svg]:px-1 has-[>kbd]:pr-1 rounded-full bg-muted gap-0.5 has-[>svg]:pl-1.5"
+            >
+              <span class="block md:hidden">Explain cron jobs</span
+              ><span class="hidden md:block">How can I schedule cron jobs?</span
+              ><svg
+                data-testid="geist-icon"
+                height="16"
+                stroke-linejoin="round"
+                viewBox="0 0 16 16"
+                width="16"
+                style="color: currentcolor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.75011 4H6.00011V5.5H6.75011H9.43945L5.46978 9.46967L4.93945 10L6.00011 11.0607L6.53044 10.5303L10.499 6.56182V9.25V10H11.999V9.25V5C11.999 4.44772 11.5512 4 10.999 4H6.75011Z"
+                  fill="currentColor"
+                ></path>
+              </svg></button
+            ><button
+              class="focus:border-alpha-400 focus-visible:border-alpha-400 disabled:border-alpha-300 border-alpha-400 hover:border-alpha-400 focus-visible:ring-offset-background inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap text-nowrap border font-medium outline-none ring-blue-600 transition-all focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 disabled:ring-0 has-[:focus-visible]:ring-2 [&amp;>svg]:pointer-events-none [&amp;>svg]:size-4 [&amp;_svg]:shrink-0 text-gray-900 hover:bg-gray-100 focus:bg-gray-100 focus-visible:bg-gray-100 h-6 px-2 text-xs has-[>kbd]:gap-2 has-[>svg]:px-1 has-[>kbd]:pr-1 rounded-full bg-muted gap-0.5 has-[>svg]:pl-1.5"
+            >
+              <span class="block md:hidden">Flatten nested arrays</span
+              ><span class="hidden md:block"
+                >A function to flatten nested arrays</span
+              ><svg
+                data-testid="geist-icon"
+                height="16"
+                stroke-linejoin="round"
+                viewBox="0 0 16 16"
+                width="16"
+                style="color: currentcolor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.75011 4H6.00011V5.5H6.75011H9.43945L5.46978 9.46967L4.93945 10L6.00011 11.0607L6.53044 10.5303L10.499 6.56182V9.25V10H11.999V9.25V5C11.999 4.44772 11.5512 4 10.999 4H6.75011Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer class="text-xs absolute bottom-4">
+        <nav class="flex h-4 divide-x">
+          <a
+            class="flex items-center gap-1 px-2 text-gray-600 transition-colors hover:text-gray-900"
+            href="/faq"
+            >FAQ</a
+          ><a
+            class="flex items-center gap-1 px-2 text-gray-600 transition-colors hover:text-gray-900"
+            href="/agreement"
+            >Terms</a
+          ><a
+            class="flex items-center gap-1 px-2 text-gray-600 transition-colors hover:text-gray-900"
+            href="/policy"
+            >AI Policy</a
+          ><a
+            class="flex items-center gap-1 px-2 text-gray-600 transition-colors hover:text-gray-900"
+            href="https://vercel.com/legal/privacy-policy"
+            target="_blank"
+            >Privacy</a
+          ><a
+            class="flex items-center gap-1 px-2 text-gray-600 transition-colors hover:text-gray-900"
+            href="https://vercel.com/?utm_source=v0-site&amp;utm_medium=banner&amp;utm_campaign=home"
+            target="_blank"
+            >Vercel<svg
+              class="size-[10px]"
+              data-testid="geist-icon"
+              height="16"
+              stroke-linejoin="round"
+              style="color: currentColor"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.5 10.25V13.25C13.5 13.3881 13.3881 13.5 13.25 13.5H2.75C2.61193 13.5 2.5 13.3881 2.5 13.25L2.5 2.75C2.5 2.61193 2.61193 2.5 2.75 2.5H5.75H6.5V1H5.75H2.75C1.7835 1 1 1.7835 1 2.75V13.25C1 14.2165 1.7835 15 2.75 15H13.25C14.2165 15 15 14.2165 15 13.25V10.25V9.5H13.5V10.25ZM9 1H9.75H14.2495C14.6637 1 14.9995 1.33579 14.9995 1.75V6.25V7H13.4995V6.25V3.56066L8.53033 8.52978L8 9.06011L6.93934 7.99945L7.46967 7.46912L12.4388 2.5H9.75H9V1Z"
+                fill="currentColor"
+              ></path></svg
+          ></a>
+        </nav>
+      </footer>
+    </div>
+  </div>
+</main>
