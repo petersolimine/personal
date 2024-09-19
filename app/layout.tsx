@@ -16,13 +16,20 @@ export const metadata = {
   ],
   author: 'Peter Solimine',
   openGraph: {
-    title:
-      'Peter Solimine - Software engineer, growth hacker, fast clapping enthusiast',
+    title: 'Peter Solimine',
     description:
-      "I'm Peter Solimine and this is my personal website. Visit it daily for good juju",
+      "I'm Peter Solimine and this is my personal website. Visit it daily for good juju. I am a software engineer and growth hacker.",
     type: 'website',
     url: 'https://petersolimine.com',
     image: 'https://petersolimine.com/og-image.jpg',
+    images: [
+      {
+        url: 'https://petersolimine.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Peter Solimine',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -36,6 +43,15 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
+  },
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Peter Solimine',
+    'format-detection': 'telephone=no',
+    'msapplication-TileColor': '#4285f4',
+    'msapplication-config': '/browserconfig.xml',
+    'theme-color': '#4285f4',
   },
 };
 
