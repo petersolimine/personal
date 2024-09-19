@@ -274,16 +274,6 @@ export default function Home() {
                     </h3>
                     <p>Question: would you rather read, or watch?</p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">
-                      Education
-                    </h3>
-                    <p>Your education details go here.</p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">Skills</h3>
-                    <p>Your skills list goes here.</p>
-                  </div>
                 </div>
               </div>
             )}
