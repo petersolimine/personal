@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="relative flex flex-col md:flex-row min-h-screen bg-black text-white font-['Inter',sans-serif] overflow-hidden">
       {/* SVG Background Animation */}
-      <div className="absolute inset-0 z-0" aria-hidden="true">
+      <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         <svg
           width="100%"
           height="100%"
