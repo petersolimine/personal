@@ -13,4 +13,11 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
   font-family: 'Inter', sans-serif;
+  overscroll-behavior-y: none;
+  background-color: black;
+}
+
+html,
+body {
+  background-color: black;
 }
