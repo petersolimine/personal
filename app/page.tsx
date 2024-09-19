@@ -222,8 +222,8 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-white">About Me</h2>
                 <p className="text-lg">
-                  Ayy, how we doin? I'm Pete. I like to make stuff. Let's be
-                  friends!
+                  Ayy, how we doin? I&apos;m Pete. I like to make stuff.
+                  Let&apos;s be friends!
                 </p>
               </div>
             )}
@@ -249,7 +249,7 @@ export default function Home() {
                   </li>
                   <li>
                     <h3 className="text-xl font-semibold text-white">Beulr</h3>
-                    <p>Probably why you're here, RIP.</p>
+                    <p>Probably why you&apos;re here, RIP.</p>
                   </li>
                   <li>
                     <h3 className="text-xl font-semibold text-white">
