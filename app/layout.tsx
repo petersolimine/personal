@@ -37,8 +37,8 @@ export const metadata = {
     creator: '@peterthedecent',
   },
   robots: 'index, follow',
-  themeColor: '#4285f4',
-  viewport: 'width=device-width, initial-scale=1',
+  // themeColor: '#4285f4',
+  // viewport: 'width=device-width, initial-scale=1',
   canonical: 'https://petersolimine.com',
   icons: {
     icon: '/favicon.ico',

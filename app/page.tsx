@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
@@ -24,9 +24,24 @@ const socialLinks = [
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('about');
+  const [sidebarLeft, setSidebarLeft] = useState('calc(50% - 532px)');
+
+  useEffect(() => {
+    const updateSidebarPosition = () => {
+      const mainContentWidth = 1064; // 2 * 532px
+      const viewportWidth = window.innerWidth;
+      const newLeft = Math.max(0, (viewportWidth - mainContentWidth) / 2);
+      setSidebarLeft(`${newLeft}px`);
+    };
+
+    updateSidebarPosition();
+    window.addEventListener('resize', updateSidebarPosition);
+
+    return () => window.removeEventListener('resize', updateSidebarPosition);
+  }, []);
 
   return (
-    <div className="relative flex flex-col md:flex-row min-h-screen bg-black text-white font-['Inter',sans-serif] overflow-hidden">
+    <div className="relative min-h-screen bg-black text-white font-['Inter',sans-serif]">
       {/* SVG Background Animation */}
       <div className="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         <svg
@@ -157,8 +172,8 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* Mobile Header */}
-      <header className="relative z-10 md:hidden flex justify-center items-center p-4 bg-black bg-opacity-80 backdrop-blur-sm">
+      {/* Responsive Header */}
+      <header className="relative z-10 lg:hidden flex justify-center items-center p-4 bg-black bg-opacity-80 backdrop-blur-sm">
         <nav className="flex space-x-4">
           {tabs.map((tab) => (
             <button
@@ -176,43 +191,8 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Sidebar */}
-      <nav className="relative z-10 hidden md:flex md:flex-col md:w-48 bg-black bg-opacity-80 backdrop-blur-sm p-6 m-4 rounded-2xl">
-        <div className="space-y-8">
-          <h1 className="text-2xl font-bold text-white">Peter Solimine</h1>
-          <ul className="space-y-4">
-            {tabs.map((tab) => (
-              <li key={tab.id}>
-                <button
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`w-full p-2 text-left rounded-full transition-colors ${
-                    activeTab === tab.id
-                      ? 'bg-white text-black'
-                      : 'hover:bg-gray-800'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex justify-start space-x-4 mt-8">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <link.icon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
-            </Link>
-          ))}
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <main className="relative z-10 flex-1 p-8 md:p-12 flex justify-center items-start">
+      {/* Content for Mobile and Tablet */}
+      <div className="lg:hidden flex items-center justify-center px-4 md:px-8 py-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -220,7 +200,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="max-w-2xl w-full bg-black bg-opacity-80 backdrop-blur-sm p-8 rounded-2xl"
           >
             {activeTab === 'about' && (
               <div>
@@ -279,7 +258,127 @@ export default function Home() {
             )}
           </motion.div>
         </AnimatePresence>
-      </main>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex lg:justify-center mt-32">
+        {/* Sidebar */}
+        <nav
+          className="fixed w-48 bg-black bg-opacity-80 backdrop-blur-sm rounded-l-2xl z-10 ml-16"
+          style={{ left: sidebarLeft }}
+        >
+          {/* Sidebar content */}
+          <div className="space-y-8">
+            <h1 className="text-2xl font-bold text-white">Peter Solimine</h1>
+            <ul className="space-y-4">
+              {tabs.map((tab) => (
+                <li key={tab.id} className="w-full">
+                  <button
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`w-full p-2 text-left rounded-full transition-colors ${
+                      activeTab === tab.id
+                        ? 'bg-white text-black'
+                        : 'hover:bg-gray-800'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-start space-x-4 mt-8">
+            {socialLinks.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <link.icon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
+              </Link>
+            ))}
+          </div>
+        </nav>
+
+        {/* Main Content Wrapper */}
+        <div className="w-full flex justify-center min-h-screen">
+          {/* Main Content */}
+          <main className="bg-black bg-opacity-80 backdrop-blur-sm rounded-r-2xl ml-48 w-[600px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+                className="min-h-[400px]"
+              >
+                {activeTab === 'about' && (
+                  <div>
+                    <h2 className="text-3xl font-bold mb-4 text-white">
+                      About Me
+                    </h2>
+                    <p className="text-lg">
+                      Ayy, how we doin? I&apos;m Pete. I like to make stuff.
+                      Let&apos;s be friends!
+                    </p>
+                  </div>
+                )}
+                {activeTab === 'projects' && (
+                  <div>
+                    <h2 className="text-3xl font-bold mb-4 text-white">
+                      My Projects
+                    </h2>
+                    <ul className="space-y-4">
+                      <li>
+                        <h3 className="text-xl font-semibold text-white">
+                          Parallel Distribution
+                        </h3>
+                        <p>Bootstrapped SaaS for scaling CPG brands.</p>
+                      </li>
+                      <li>
+                        <h3 className="text-xl font-semibold text-white">
+                          Indie Hacking
+                        </h3>
+                        <p>
+                          Chatti, Parrot, Quizwiz, SayBloom, etc... Consumer
+                          apps.
+                        </p>
+                      </li>
+                      <li>
+                        <h3 className="text-xl font-semibold text-white">
+                          Beulr
+                        </h3>
+                        <p>Probably why you&apos;re here, RIP.</p>
+                      </li>
+                      <li>
+                        <h3 className="text-xl font-semibold text-white">
+                          Chroma Hacker in Residence
+                        </h3>
+                        <p>Chroma is epic</p>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                {activeTab === 'blog' && (
+                  <div>
+                    <h2 className="text-3xl font-bold mb-4 text-white">Blog</h2>
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-xl font-semibold text-white">
+                          Coming soon...
+                        </h3>
+                        <p>Question: would you rather read, or watch?</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </main>
+        </div>
+      </div>
 
       <style jsx global>{`
         @keyframes pulse-fade {
