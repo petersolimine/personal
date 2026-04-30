@@ -8,9 +8,9 @@ const Dither = dynamic(() => import('./Dither'), { ssr: false });
 const funSiteUrl = 'https://datboi.org';
 
 const projects = [
-  ['Parallel Distribution', 'Bootstrapped SaaS for scaling CPG brands.'],
-  ['Indie Hacking', 'Chatti, Parrot, Quizwiz, SayBloom, etc... Consumer apps.'],
-  ['Beulr', "Probably why you're here, RIP."],
+  ['Parallel Distribution', 'Building a traffic studio with a team of 12+ engineers.'],
+  ['Indie Hacking', 'I built a number of consumer apps, scaling some to 6-figure MRR.'],
+  ['Beulr', "Probably why you're here, RIP Beulr will someday make a comeback. Be ready."],
   ['Chroma Hacker in Residence', 'Chroma is epic'],
 ];
 
