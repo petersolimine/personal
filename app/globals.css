@@ -2,22 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
+  --background-rgb: 5, 5, 5;
+  --professional-neon: 122, 255, 90;
+}
+
+html {
+  background: rgb(var(--background-rgb));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  background: rgb(var(--background-rgb));
   font-family: 'Inter', sans-serif;
   overscroll-behavior-y: none;
-  background-color: black;
 }
 
-html,
-body {
-  background-color: black;
+::selection {
+  background: rgba(var(--professional-neon), 0.9);
+  color: black;
 }
